@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>StreetView Submitter</title>		
+		<script type="text/javascript">
+		
+			var placesArray = [
+
+				{"lat": '51.508007', "lng": "-0.128103", "zoom": "21"},		// Trafalgar square		
+				{"lat": '48.85832', "lng": "2.294223", "zoom": "18"}, 		// Eiffel tower			
+				{"lat": '40.689286', "lng": "-74.044949", "zoom": "18"},	// Statue of Liberty
+				{"lat": '37.421708', "lng": "-122.084101", "zoom": "17"}	// Google HQ
+			];
+		
+			function populateForm(val) {
+				document.getElementById("lat").value = placesArray[val].lat;
+				document.getElementById("lng").value = placesArray[val].lng;
+				document.getElementById("zoom").value = placesArray[val].zoom;
+			}		
+		</script>
+	</head>
+	<body>
+	
+		<select name="" onchange="populateForm(this.value)">
+			<option value="0">Trafalgar Square</option>
+			<option value="1">Eiffel Tower</option>
+			<option value="2">Statue of Liberty</option>
+			<option value="3">Google HQ</option>				
+		</select>	
+
+		<form name="predefined" action="streetview1.html">
+
+			<p>
+				Latitude: <input id="lat" type="text" size="20" name="lat">
+			</p>
+			<p>
+				Longitude: <input id="lng" type="text" size="20" name="lng">
+			</p>
+			<p>
+				Zoom level: <input id="zoom" type="text" size="20" name="zoom">
+			</p>
+			<input type="submit" name="Submit" value="GO" />			
+		</form>
+	</body>
+</html>
+
