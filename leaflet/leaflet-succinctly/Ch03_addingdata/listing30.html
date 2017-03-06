@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Leaflet.js Map</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js">
+
+
+    </script>
+    <style>
+        html,
+        body,
+        #map {
+            height: 100%;
+        }
+
+    </style>
+    <script type="text/javascript">
+        function init() {
+
+            var map = L.map('map').setView([51.899, -1.146], 15);
+
+            // OSM Mapnik
+            var osmLink = "<a href='http://www.openstreetmap.org'>Open StreetMap</a>";
+            L.tileLayer(
+                'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; ' + osmLink,
+                    maxZoom: 18,
+                }).addTo(map);
+
+            var schoolSymbol = {
+                "color": "#CE4A93",
+                "weight": 5,
+                "fillColor": "#FF002B",
+                "fillOpacity": 0.65
+            };
+
+            var schoolsGeoJSON = [{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                        [
+                            [-1.173, 51.907],
+                            [-1.174, 51.906],
+                            [-1.173, 51.905],
+                            [-1.173, 51.905],
+                            [-1.172, 51.905],
+                            [-1.172, 51.905],
+                            [-1.173, 51.905],
+                            [-1.172, 51.906]
+                        ]
+                    ]
+
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                        [
+                            [-1.163, 51.902],
+                            [-1.164, 51.901],
+                            [-1.164, 51.901],
+                            [-1.165, 51.900],
+                            [-1.159, 51.899],
+                            [-1.158, 51.899],
+                            [-1.158, 51.899],
+                            [-1.158, 51.900],
+                            [-1.158, 51.900],
+                            [-1.158, 51.900],
+                            [-1.162, 51.902]
+                        ]
+                    ]
+
+                }
+            }];
+
+            var geoJSONLayer = L.geoJson(schoolsGeoJSON, {
+                style: schoolSymbol
+            }).addTo(map);
+
+        }
+
+    </script>
+</head>
+
+<body onload=init()>
+    <div id="map"></div>
+</body>
+
+</html>

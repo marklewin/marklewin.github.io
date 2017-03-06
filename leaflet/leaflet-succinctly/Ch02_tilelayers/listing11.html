@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Leaflet.js Map</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js">
+    </script>
+    <style>
+        html,
+        body,
+        #map {
+            height: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+        function init() {
+            var map = L.map('map').setView([37.42, -122.05], 12);
+            attrLink = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
+            attrLinkToner = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.';
+            var terrainMap = L.tileLayer(
+                'http://{s}.tile.stamen.com/terrain/{z}/{x}/{y}.jpg', {
+                    attribution: attrLink,
+                    maxZoom: 18,
+                }).addTo(map);
+            var tonerMap = L.tileLayer(
+                'http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {
+                    attribution: attrLinkToner,
+                    maxZoom: 18,
+                }).addTo(map);
+            var watercolorMap = L.tileLayer(
+                'http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {
+                    attribution: attrLink,
+                    maxZoom: 18,
+                }).addTo(map);
+
+            var baseLayers = {
+                "Stamen Terrain": terrainMap,
+                "Stamen Toner": tonerMap,
+                "Stamen Watercolor": watercolorMap
+            };
+            L.control.layers(baseLayers).addTo(map);
+        }
+
+    </script>
+</head>
+
+<body onload=init()>
+    <div id="map"></div>
+</body>
+
+</html>

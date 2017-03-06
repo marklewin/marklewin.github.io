@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Leaflet.js Map</title>
+    <link rel="stylesheet" 
+      href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js">
+    </script>
+    <style>
+      html, body, #map {
+        height: 100%;
+      }
+    </style>
+<script type="text/javascript">
+
+    var theRectangle;
+
+    function init() {
+        var map = L.map('map').setView([52.96228865548326, -7.499542236328124],10);
+
+        var mapLink = "Esri";
+        var sourcesLink ="Contributors";
+        // Esri World Imagery Service
+        L.tileLayer(
+                'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                attribution: '&copy; ' + mapLink + ', ' + sourcesLink,
+                maxZoom: 18,
+        }).addTo(map);
+
+        theRectangle = L.rectangle(
+            [[52.947728, -7.820206],[53.013874, -7.637558]],
+            {
+                color: "red",
+                weight: 5,
+                fillColor:"yellow",
+            }
+        ).addTo(map);
+
+        var marker1 = L.marker([53.085694, -7.459030], 
+                               {draggable:true}).addTo(map);
+        marker1.on("dragstart", dragStartHandler);
+        marker1.on("dragend", dragEndHandler);
+        var marker2 = L.marker([52.875678, -7.772141],
+                               {draggable:true}).addTo(map);
+        marker2.on("dragstart", dragStartHandler);
+        marker2.on("dragend", dragEndHandler);
+        var marker3 = L.marker([53.033699, -7.903976],
+                               {draggable:true}).addTo(map);
+        marker3.on("dragstart", dragStartHandler);
+        marker3.on("dragend", dragEndHandler);
+    }			
+
+    function dragStartHandler(e) {
+        // starting marker drag
+    }
+
+    function dragEndHandler(e) {
+        // ending marker drag
+    }
+</script>
+</head>
+<body onload=init()>
+	<div id="map"></div>
+</body>
+</html>

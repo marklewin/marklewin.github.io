@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Leaflet.js Map</title>
+    <link rel="stylesheet" 
+      href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js">
+    </script>
+    <style>
+      html, body, #map {
+        height: 100%;
+      }
+    </style>
+    <script type="text/javascript">
+    function init() {
+        var map = L.map('map').setView([51.76, -1.26],16);;
+
+        // OSM Mapnik
+        var osmLink = "<a href='http://www.openstreetmap.org'>Open StreetMap</a>";   
+        var osm = L.tileLayer(
+            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; ' + osmLink,
+            maxZoom: 18,
+        }).addTo(map);
+
+        var pubIcon = L.icon({
+            iconUrl: "./images/beer.png",
+            iconSize: [40,50]
+        });
+        var pubMarker = L.marker([51.757230,-1.260269],
+        {
+            icon: pubIcon
+        });  
+
+        var walkLine = L.polyline([
+            [51.757276, -1.260129],
+            [51.756831, -1.260054],
+            [51.756154, -1.259700],
+            [51.756074, -1.259453],
+            [51.755636, -1.259346]
+        ], {
+            color: "red",
+            weight: 8
+        });       
+
+        var buildingPoly = L.polygon([
+            [51.756633, -1.258688],
+            [51.756416, -1.258618],
+            [51.756454, -1.258323],
+            [51.756592, -1.258371],
+            [51.756584, -1.258443],
+            [51.756663, -1.258473]
+        ], {
+            color: "blue",
+            weight: 5,
+            fillColor: "red",
+            fillOpacity: 0.5
+        });
+
+        var popupContent = "<h2>Walking Tour of Oxford</h2>" +
+            "<p>Lots of <b>cool things</b> to see in " + 
+            "<a href='https://en.wikipedia.org/wiki/Oxford'>Oxford</a>";
+        var myFeatureGroup = L.featureGroup(
+            [
+                pubMarker,
+                walkLine,
+                buildingPoly
+            ]
+        ).bindPopup(popupContent).addTo(map);
+
+        var baseLayers = {
+            "OpenStreetMap": osm
+        };
+
+        var overlays = {
+            "My Layer Group": myLayerGroup,
+        };
+
+        L.control.layers(baseLayers, overlays).addTo(map);
+
+    }			
+    </script>
+</head>
+<body onload=init()>
+	<div id="map"></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Leaflet.js Map</title>
+    <link rel="stylesheet" 
+      href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <link rel="stylesheet" href="css/l.geosearch.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script src="js/l.control.geosearch.js"></script>
+    <script src="js/l.geosearch.provider.openstreetmap.js"></script>
+    <style>
+      html, body, #map {
+        height: 100%;
+      }
+    </style>
+    <script type="text/javascript">
+        function init() {
+            var osmLink = "<a href='http://www.openstreetmap.org'>Open StreetMap</a>"
+            var map = L.map('map').setView([34.525, -97.778],5);
+            L.tileLayer(
+                'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; ' + osmLink,
+                maxZoom: 18,
+            }).addTo(map);
+            
+            new L.Control.GeoSearch({
+                provider: new L.GeoSearch.Provider.OpenStreetMap()
+            }).addTo(map);
+        }			
+    </script>
+</head>
+<body onload=init()>
+	<div id="map"></div>
+</body>
+</html>

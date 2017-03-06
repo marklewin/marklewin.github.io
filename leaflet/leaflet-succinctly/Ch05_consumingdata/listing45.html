@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Leaflet.js Map</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script src="js/leaflet-layerjson.min.js"></script>
+    </script>
+    <style>
+        html,
+        body,
+        #map {
+            height: 100%;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function init() {
+            var map = L.map('map').setView([51.505, -0.106],14);
+
+            // OSM Mapnik
+            var osmLink = "<a href='http://www.openstreetmap.org'>Open StreetMap</a>";
+            L.tileLayer(
+                'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; ' + osmLink,
+                    maxZoom: 18
+                }).addTo(map);
+            
+            showPhotos(map);
+        }
+
+        function showPhotos(map) {
+
+            var url1 = "https://api.flickr.com/services/rest/?method=flickr.photos.search";
+            // change this for your API key
+            var url2 = "&api_key=[Your API Key]";
+            var url3 = "&text=London&has_geo=1&extras=geo%2C+url_s"
+            var url4 = "&per_page=100&format=json&nojsoncallback=1"
+            // change this for your API sig value
+            var url5 = "&api_sig=[Your API Sig]"
+
+
+            var popupContent = function(data,markers) {
+                        return "<strong>"
+                            + data.title
+                            + "</strong><br><img src='"
+                            + data.url_s+"'>"|| null;
+            };
+
+            jsonLayer = new L.LayerJSON({
+                url: url1 + url2 + url3 + url4 + url5,
+                propertyItems: 'photos.photo',
+                propertyLoc: ['latitude','longitude'],
+                buildPopup: popupContent
+            });
+
+            map.addLayer(jsonLayer);
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="map"></div>
+</body>
+
+</html>

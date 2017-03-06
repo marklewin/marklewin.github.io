@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Leaflet.js Map</title>
+    <link rel="stylesheet" 
+      href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js">
+    </script>
+    <style>
+      html, body, #map {
+        height: 100%;
+      }
+    </style>
+    <script type="text/javascript">
+        function init() {
+            var map = L.map('map').setView([51.76, -1.26],16);;
+        
+            // OSM Mapnik
+            var osmLink = "<a href='http://www.openstreetmap.org'>Open StreetMap</a>";   
+            L.tileLayer(
+                'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; ' + osmLink,
+                maxZoom: 18,
+            }).addTo(map);
+  
+            var pubIcon = L.icon({
+                iconUrl: "./images/beer.png",
+                iconSize: [40,50]
+            });
+            var pubMarker = L.marker([51.757230,-1.260269],
+            {
+                icon: pubIcon,
+                title: "The Eagle and Child: JRR Tolkien and CS Lewis supped beer here",
+                alt: "The Eagle and Child public house"
+            }).addTo(map);  
+            
+            var walkLine = L.polyline([
+                [51.757276, -1.260129],
+                [51.756831, -1.260054],
+                [51.756154, -1.259700],
+                [51.756074, -1.259453],
+                [51.755636, -1.259346]
+            ], {
+                color: "red",
+                weight: 8
+            }).addTo(map);       
+                        
+            var buildingPoly = L.polygon([
+                [51.756633, -1.258688],
+                [51.756416, -1.258618],
+                [51.756454, -1.258323],
+                [51.756592, -1.258371],
+                [51.756584, -1.258443],
+                [51.756663, -1.258473]
+            ], {
+                color: "blue",
+                weight: 5,
+                fillColor: "red",
+                fillOpacity: 0.5
+            }).addTo(map);
+            
+            var parkRectangle = L.rectangle([
+                [51.761539, -1.258820],
+                [51.760995, -1.256974]
+            ], {
+                color: "red",
+                weight: 5,
+                fillColor:"blue"
+            }).addTo(map);
+            
+            var areaCircle = L.circle(
+                [51.759806, -1.264173],
+                100,
+                {
+                    color: "red",
+                    weight: 5,
+                    fillColor:"green"
+                }
+            ).addTo(map);
+        }			
+    </script>
+</head>
+<body onload=init()>
+	<div id="map"></div>
+</body>
+</html>

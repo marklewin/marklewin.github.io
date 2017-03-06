@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Leaflet.js Map</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js">
+    </script>
+    <style>
+        html,
+        body,
+        #map {
+            height: 100%;
+        }
+
+    </style>
+    <script type="text/javascript">
+        function init() {
+
+            var map = L.map('map').setView([51.899, -1.146],15);
+
+            // OSM Mapnik
+            var osmLink = "<a href='http://www.openstreetmap.org'>Open StreetMap</a>";   
+            L.tileLayer(
+                'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; ' + osmLink,
+                maxZoom: 18,
+            }).addTo(map);
+
+            var geoJSON = [{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-1.155, 51.896]
+                },
+                "properties": {
+                    "name": "Aziz",
+                    "cuisine": "Indian"
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-1.150, 51.897]
+                },
+                "properties": {
+                    "name": "Dak Bo",
+                    "cuisine": "Chinese"
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-1.153, 51.897]
+                },
+                "properties": {
+                    "name": "Luigi's",
+                    "cuisine": "Italian"
+                }
+            }];
+            
+            var indianIcon = L.icon({
+                iconUrl: 'images/India.png',
+                iconSize: [48, 48],
+            });
+            var chineseIcon = L.icon({
+                iconUrl: 'images/China.png',
+                iconSize: [48, 48],
+            });
+            var italianIcon = L.icon({
+                iconUrl: 'images/Italy.png',
+                iconSize: [48, 48],
+            });            
+
+            var indian, chinese, italian;
+            var geoJSONLayer = L.geoJson(geoJSON, {
+                pointToLayer: function(feature, latlng) {
+                    switch(feature.properties.cuisine) {
+                        case 'Indian':
+                            indian = L.marker(latlng, {
+                                icon: indianIcon
+                            }).bindPopup(feature.properties.name);
+                            return indian;
+                            break;
+                        case 'Chinese':
+                            chinese = L.marker(latlng, {
+                                icon: chineseIcon
+                            }).bindPopup(feature.properties.name);
+                            return chinese;
+                            break;  
+                        case 'Italian':
+                            italian = L.marker(latlng, {
+                                icon: italianIcon
+                            }).bindPopup(feature.properties.name);
+                            return italian;
+                            break;                             
+                    }
+                }
+            }).addTo(map);
+
+        }
+
+    </script>
+</head>
+
+<body onload=init()>
+    <div id="map"></div>
+</body>
+
+</html>

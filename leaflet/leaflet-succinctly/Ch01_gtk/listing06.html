@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Leaflet.js Map</title>
+    <link rel="stylesheet" 
+      href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js">
+    </script>
+    <style>
+      html, body, #map {
+        height: 100%;
+      }
+    </style>
+    <script type="text/javascript">
+        function init() {
+          var map = L.map('map').setView([51.73, -1.28], 12);
+        }  
+    </script>
+</head>
+<body onload=init()>
+	<div id="map"></div>
+</body>
+</html>

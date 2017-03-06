@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Leaflet.js Map</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js">
+    </script>
+    <style>
+        html,
+        body,
+        #map {
+            height: 100%;
+        }
+
+    </style>
+    <script type="text/javascript">
+        function init() {
+
+            var map = L.map('map').setView([51.899, -1.146], 15);
+
+            // OSM Mapnik
+            var osmLink = "<a href='http://www.openstreetmap.org'>Open StreetMap</a>";
+            L.tileLayer(
+                'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; ' + osmLink,
+                    maxZoom: 18,
+                }).addTo(map);
+
+            var geoJSON = [{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-1.145, 51.898]
+                },
+                "properties": {
+                    "name": "My Point",
+                    "title": "This is a point"
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                        [-1.161, 51.904],
+                        [-1.159, 51.909],
+                        [-1.157, 51.903],
+                        [-1.149, 51.905],
+                        [-1.144, 51.904]
+                    ]
+                },
+                "properties": {
+                    "name": "My LineString",
+                    "title": "This is a polyline"
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                        [
+                            [-1.176, 51.905],
+                            [-1.176, 51.902],
+                            [-1.165, 51.899],
+                            [-1.163, 51.902]
+                        ]
+                    ]
+                },
+                "properties": {
+                    "name": "My Polygon",
+                    "title": "This is a polygon"
+                }
+            }];
+
+            var geoJSONLayer = L.geoJson(geoJSON).addTo(map);
+
+        }
+
+    </script>
+</head>
+
+<body onload=init()>
+    <div id="map"></div>
+</body>
+
+</html>

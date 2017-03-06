@@ -1,0 +1,17 @@
+html, body, #map {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.info {
+    padding: 15px 15px 15px 15px; 
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: #59F634;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+}
+.info h4 {
+    margin: 5px 5px;
+    color: #777;
+}
