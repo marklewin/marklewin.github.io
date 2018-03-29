@@ -46,6 +46,8 @@ function drawingFinished(e) {
     document.getElementById("leftDiv").innerHTML += "<button id='btnResult' class='result-button'" + idx + " onclick='getOverlayCode(" + idx + ")'>" + overlayInfo.id + "</button>"
 
     setDrawingOptions(++labelCount);
+
+    getOverlayCode(idx);
 }
 
 function setDrawingOptions() {
@@ -58,12 +60,8 @@ function setDrawingOptions() {
             position: google.maps.ControlPosition.TOP_CENTER,
             drawingModes: ['marker', 'circle', 'polygon', 'polyline', 'rectangle']
         },
-
         markerOptions: {
             label: labelCount.toString()
-        },
-        circleOptions: {
-            // add a label
         }
     });
 }
