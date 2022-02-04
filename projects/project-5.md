@@ -25,4 +25,4 @@ This introduction to Leaflet.js will teach key concepts of the software and crit
 - Accessing External Data Sources
 - Geocoding
 
-> You can [download this title for free](https://www.syncfusion.com/succinctly-free-ebooks/confirmation/leafletjs) from SyncFusion.
+**You can [download this title for free](https://www.syncfusion.com/succinctly-free-ebooks/confirmation/leafletjs) from SyncFusion.**
