@@ -7,6 +7,7 @@ permalink: projects/leaflet-js-succinctly
 # All dates must be YYYY-MM-DD format!
 date: 2016-03-22
 labels:
+  - BOOK
   - web mapping
   - JavaScript
 summary: A guide to the delightful open-source web mapping framework, Leaflet.js.

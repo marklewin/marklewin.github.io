@@ -7,6 +7,7 @@ permalink: projects/google-maps-api-succinctly
 # All dates must be YYYY-MM-DD format!
 date: 2018-08-06
 labels:
+  - BOOK
   - web mapping
   - JavaScript
 summary: A quick introduction to the main features of the Google Maps API for readers familiar with vanilla JavaScript.

@@ -7,6 +7,7 @@ permalink: projects/go-web-dev-succinctly
 # All dates must be YYYY-MM-DD format!
 date: 2017-07-17
 labels:
+  - BOOK
   - golang
 summary: A follow up from my earlier book on Go, focusing on using Go for web development and building APIs.
 ---

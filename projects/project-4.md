@@ -7,6 +7,7 @@ permalink: projects/go-web-dev-succinctly
 # All dates must be YYYY-MM-DD format!
 date: 2017-07-24
 labels:
+  - BOOK
   - golang
 summary: A beginner's primer on the Go programming language.
 ---

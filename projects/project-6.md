@@ -7,6 +7,7 @@ permalink: projects/arcgis-packt
 # All dates must be YYYY-MM-DD format!
 date: 2017-10-01
 labels:
+  - BOOK
   - web mapping
   - JavaScript
 summary: A book I wrote, in collaboration with Eric Pimpler, about building web and mobile mapping applications using Esri's ArcGIS framework.
