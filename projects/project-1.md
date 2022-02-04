@@ -24,3 +24,5 @@ Deno is a JavaScript runtime by the creator of Node, built upon the lessons lear
 - Code a Static Site Generator
 - Build a RESTful API
 - Conclusion and Resources
+
+> You can [download this title for free](https://www.syncfusion.com/succinctly-free-ebooks/download/deno-succinctly).
