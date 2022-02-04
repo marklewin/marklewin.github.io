@@ -9,8 +9,7 @@ date: 2021-06-09
 labels:
   - Deno
   - JavaScript
-summary: A book I wrote for Syncfusion's _Succinctly_ series. It introduces readers familiar with Node.js to Deno, by creating three projects that demonstrate Deno's features.
-projecturl: https://www.syncfusion.com/succinctly-free-ebooks/deno-succinctly
+summary: A book I wrote for Syncfusion's "Succinctly" series. It introduces readers familiar with Node.js to Deno, by creating three projects that demonstrate Deno's features.
 ---
 
 <img class="ui medium right floated rounded image" src="../images/deno-succinctly.png">
@@ -25,3 +24,5 @@ Deno is a JavaScript runtime by the creator of Node, built upon the lessons lear
 - Code a Static Site Generator
 - Build a RESTful API
 - Conclusion and Resources
+
+> You can [download this title for free](https://www.syncfusion.com/succinctly-free-ebooks/download/deno-succinctly) from SyncFusion.
