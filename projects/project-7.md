@@ -20,8 +20,6 @@ I was pretty proud of this one: over 10,000 students took the course, and it rec
 
 The course has now been retired from the main course catalogue, but is still available in Pluralsight's extended library.
 
-## WHAT YOU'LL LEARN
-
 This course introduces beginning to intermediate JavaScript developers to the Google Maps API, a powerful library that enables developers to harness the power of the Google Maps platform and build web mapping applications. The course shows how Google Maps works, how to embed a dynamic map within a web page, set its extent, add and symbolize geometry to display data, and take advantage of web services to add extra functionality to your applications.
 
 > More details about this course [here](https://www.pluralsight.com/courses/google-maps-api-get-started).
