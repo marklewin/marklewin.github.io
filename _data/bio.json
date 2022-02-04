@@ -65,17 +65,6 @@
       "keywords": ["OpenAPI", "Git/GitHub", "Markdown"]
     }
   ],
-  "education": [
-    {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
-      "studyType": "B.S.",
-      "startDate": "2013-09-01",
-      "endDate": "Present",
-      "gpa": "",
-      "courses": []
-    }
-  ],
   "work": [
     {
       "company": "Shell",
