@@ -82,7 +82,7 @@
     {
       "company": "Ably Realtime",
       "position": "Senior Technical Writer",
-      "website": "http://ably.com/docs",
+      "website": "https://ably.com/documentation",
       "startDate": "2021-05-01",
       "endDate": "2021-11-30",
       "summary": "I worked as a technical writer in the Product team, documenting APIs and SDKs for the company’s realtime communications platform. My responsibilities included:",
@@ -95,7 +95,7 @@
     {
       "company": "Vonage",
       "position": "Senior Technical Writer",
-      "website": "http://docs.vonage.com",
+      "website": "https://developer.vonage.com",
       "startDate": "2018-09-01",
       "endDate": "2021-05-31",
       "summary": "Vonage provides communication APIs (including SMS, Voice, Video and social messaging channels). I worked as part of the Developer Relations team. My responsibilities included creating/maintaining API reference documentation and writing courseware, tutorials, blog posts and other educational content. Highlights included:",
