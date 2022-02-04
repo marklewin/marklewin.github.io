@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: images/pluralsight-gmaps-api.png
-title: Pluralsight's Google Maps API: Get Started course
+title: Pluralsight's Google Maps API Get Started course
 permalink: projects/google-maps-api-get-started
 # All dates must be YYYY-MM-DD format!
 date: 2014-09-08
