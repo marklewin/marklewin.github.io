@@ -35,7 +35,7 @@
   "interests": [
     {
       "name": "realtime communication APIs",
-      "keywords": ["Arduino", "TI MSP430"]
+      "keywords": []
     },
     {
       "name": "web mapping APIs",
@@ -50,12 +50,19 @@
     {
       "name": "Languages and Frameworks",
       "level": "",
-      "keywords": ["C", "C++", "Java", "Javascript", "Assembly", "Common Lisp"]
+      "keywords": [
+        "JavaScript/Node.js",
+        "Python",
+        "Java",
+        "Ruby",
+        "Deno",
+        "Golang"
+      ]
     },
     {
-      "name": "Toolsets/OS",
+      "name": "Docs as code",
       "level": "",
-      "keywords": ["MacOS", "Ubuntu", "Git/GitHub", "g++", "TI LaunchPad"]
+      "keywords": ["OpenAPI", "Git/GitHub", "Markdown"]
     }
   ],
   "education": [
@@ -71,8 +78,8 @@
   ],
   "work": [
     {
-      "company": "UH Manoa Board of Publications",
-      "position": "Web Developer",
+      "company": "Shell",
+      "position": "Contract Technical Writer",
       "website": "",
       "startDate": "2015-08-01",
       "endDate": "Present",
