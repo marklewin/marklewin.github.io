@@ -2,83 +2,60 @@
   "basics": {
     "name": "Molly Maluhia",
     "label": "Student",
-    "picture": "https://techfolios.github.io/template/images/molly.png",
+    "picture": "https://marklewin.github.io/images/mark.png",
     "email": "molly@hawaii.edu",
     "phone": "808-333-4444",
-    "website": "https://mmaluhia.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2020.",
+    "website": "https://devtechwriter.com",
+    "summary": "I am an experienced technical writer specialising in API documentation, with a background in developing and delivering training for software developers.",
     "location": {
       "address": "",
-      "postalCode": "96822",
-      "city": "Honolulu",
-      "countryCode": "USA",
-      "region": "Hawaii"
+      "postalCode": "NN13 6BX",
+      "city": "Brackley",
+      "countryCode": "UK",
+      "region": "Northants"
     },
     "profiles": [
       {
         "network": "github",
-        "username": "mmaluhia",
-        "url": "http://github.com/changeme"
+        "username": "marklewin",
+        "url": "https://github.com/marklewin"
       },
       {
         "network": "linkedin",
-        "username": "mollymaluhia",
-        "url": "http://linkedin.com/in/changeme"
+        "username": "devtechwriter",
+        "url": "https://www.linkedin.com/in/devtechwriter/"
       },
       {
         "network": "twitter",
-        "username": "mollymal",
-        "url": "http://twitter.com/changeme"
-      },
-      {
-        "network": "instagram",
-        "username": "molly",
-        "url": "http://instagram.com/changeme"
+        "username": "devtechwriter",
+        "url": "http://twitter.com/devtechwriter"
       }
     ]
   },
   "interests": [
     {
-      "name": "internet of things",
-      "keywords": [
-        "Arduino",
-        "TI MSP430"
-      ]
+      "name": "realtime communication APIs",
+      "keywords": ["Arduino", "TI MSP430"]
     },
     {
-      "name": "data mining",
-      "keywords": [
-      ]
+      "name": "web mapping APIs",
+      "keywords": []
     },
     {
-      "name": "artificial intelligence",
-      "keywords": [
-      ]
+      "name": "developer education",
+      "keywords": []
     }
   ],
   "skills": [
     {
       "name": "Languages and Frameworks",
       "level": "",
-      "keywords": [
-        "C",
-        "C++",
-        "Java",
-        "Javascript",
-        "Assembly",
-        "Common Lisp"
-      ]
+      "keywords": ["C", "C++", "Java", "Javascript", "Assembly", "Common Lisp"]
     },
     {
       "name": "Toolsets/OS",
       "level": "",
-      "keywords": [
-        "MacOS",
-        "Ubuntu",
-        "Git/GitHub",
-        "g++",
-        "TI LaunchPad"
-      ]
+      "keywords": ["MacOS", "Ubuntu", "Git/GitHub", "g++", "TI LaunchPad"]
     }
   ],
   "education": [
@@ -89,8 +66,7 @@
       "startDate": "2013-09-01",
       "endDate": "Present",
       "gpa": "",
-      "courses": [
-      ]
+      "courses": []
     }
   ],
   "work": [
