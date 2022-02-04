@@ -22,6 +22,6 @@ The course has now been retired from the main course catalogue, but is still ava
 
 ## COURSE OVERVIEW
 
-This course introduces beginning to intermediate JavaScript developers to the Google Maps API, a powerful library that enables developers to harness the power of the Google Maps platform and build web mapping applications. The course shows how Google Maps works, how to embed a dynamic map within a web page, set its extent, add and symbolize geometry to display data, and take advantage of web services to add extra functionality to your applications.
+_This course introduces beginning to intermediate JavaScript developers to the Google Maps API, a powerful library that enables developers to harness the power of the Google Maps platform and build web mapping applications. The course shows how Google Maps works, how to embed a dynamic map within a web page, set its extent, add and symbolize geometry to display data, and take advantage of web services to add extra functionality to your applications._
 
 **More details about this course [here](https://www.pluralsight.com/courses/google-maps-api-get-started).**
