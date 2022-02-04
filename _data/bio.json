@@ -70,7 +70,7 @@
       "company": "Shell",
       "position": "Contract Technical Writer",
       "website": "",
-      "startDate": "2015-08-01",
+      "startDate": "2021-11-30",
       "endDate": "Present",
       "summary": "I was brought on board to advise on a strategy for documenting Shell’s range of APIs for partner developers. My responsibilities include:",
       "highlights": [
@@ -102,7 +102,7 @@
       "highlights": [
         "Compiled API reference documentation using OpenAPI/Swagger and tools like Git, Spectral, and Postman",
         "Created and documented demo applications and code samples using Node.js, Python, PHP, Ruby and Java",
-        "Designed and helped implement a new feedback mechanism for our developer documentation, which greatly increased the quantity and quality of feedback",
+        "Designed and helped implement a new feedback mechanism for the developer documentation, which greatly increased the quantity and quality of feedback",
         "Developed and delivered an accredited training program on using Vonage APIs for partner developers",
         "Created an introductory course on OpenAPI to increase awareness and adoption internally"
       ]
