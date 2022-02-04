@@ -8,8 +8,6 @@ permalink: projects/deno-succinctly
 date: 2021-06-09
 labels:
   - BOOK
-  - Deno
-  - JavaScript
 summary: A book I wrote for Syncfusion's "Succinctly" series. It introduces readers familiar with Node.js to Deno, by creating three projects that demonstrate Deno's features.
 ---
 

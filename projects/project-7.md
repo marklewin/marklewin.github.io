@@ -8,8 +8,6 @@ permalink: projects/google-maps-api-get-started
 date: 2014-09-08
 labels:
   - COURSE
-  - web mapping
-  - JavaScript
 summary: A course on the Google Maps API that I developed and recorded for Pluralsight.
 ---
 

@@ -8,7 +8,6 @@ permalink: projects/go-web-dev-succinctly
 date: 2017-07-24
 labels:
   - BOOK
-  - golang
 summary: A beginner's primer on the Go programming language.
 ---
 
