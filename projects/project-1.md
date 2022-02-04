@@ -12,3 +12,16 @@ labels:
 summary: A book I wrote for Syncfusion's _Succinctly_ series. It introduces readers familiar with Node.js to Deno, by creating three projects that demonstrate Deno's features.
 projecturl: https://www.syncfusion.com/succinctly-free-ebooks/deno-succinctly
 ---
+
+<img class="ui medium right floated rounded image" src="../images/deno-succinctly.png">
+
+Deno is a JavaScript runtime by the creator of Node, built upon the lessons learned from Node becoming an integral part of so many apps since 2009, plus the ever-changing web app landscape. In Deno Succinctly, author Mark Lewin illuminates the improvements that Deno brings to server-side web development, and guides readers through three quick projects that demonstrate significant features of the runtime. Regardless of your past experience with Node or other JavaScript runtimes, this ebook will help you get started with Deno quickly and easily.
+
+## TABLE OF CONTENTS
+
+- Introducing Deno
+- Deno and Node.js
+- Create a URL Shortener Console Application
+- Code a Static Site Generator
+- Build a RESTful API
+- Conclusion and Resources
