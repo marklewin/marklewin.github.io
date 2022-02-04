@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: images/vonage-logo.png
+image: images/vonage-logo.jpg
 title: Vonage Learn Blog Posts
 permalink: projects/vonage-blog
 # All dates must be YYYY-MM-DD format!
