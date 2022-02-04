@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: images/mark.jpg
+image: images/twilio-logo.png
 title: Twilio Voices Blog Post
 permalink: projects/twilio-blog
 # All dates must be YYYY-MM-DD format!
