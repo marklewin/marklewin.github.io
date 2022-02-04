@@ -3,7 +3,7 @@ layout: project
 type: project
 image: images/arcgis-packt.png
 title: Building Web and Mobile ArcGIS Server Applications with JavaScript - Second Edition
-permalink: projects/leaflet-js-succinctly
+permalink: projects/arcgis-packt
 # All dates must be YYYY-MM-DD format!
 date: 2017-10-01
 labels:
