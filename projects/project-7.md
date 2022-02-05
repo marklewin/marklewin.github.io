@@ -7,7 +7,7 @@ permalink: projects/google-maps-api-get-started
 # All dates must be YYYY-MM-DD format!
 date: 2014-09-08
 labels:
-  - COURSE
+  - COURSES
 summary: A course on the Google Maps API that I developed and recorded for Pluralsight.
 ---
 
