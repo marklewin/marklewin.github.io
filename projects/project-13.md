@@ -5,7 +5,7 @@ image: images/geospatialtraining.png
 title: Geospatial Training LLC
 permalink: projects/geospatialtraining-blog
 # All dates must be YYYY-MM-DD format!
-date: 2016-07-04
+date: 2017-12-11
 labels:
   - BLOG POSTS
   - COURSES
