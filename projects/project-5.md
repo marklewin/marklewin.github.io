@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: images/leaflet-js-succinctly.jpeg
+image: images/leaflet-js-succinctly.png
 title: Leaflet JS Succinctly
 permalink: projects/leaflet-js-succinctly
 # All dates must be YYYY-MM-DD format!
@@ -11,7 +11,7 @@ labels:
 summary: A guide to the delightful open-source web mapping framework, Leaflet.js.
 ---
 
-<img class="ui medium right floated rounded image" src="../images/leaflet-js-succinctly.jpeg">
+<img class="ui medium right floated rounded image" src="../images/leaflet-js-succinctly.png">
 
 _This introduction to Leaflet.js will teach key concepts of the software and critical techniques in order to help you develop web-ready interactive maps. Mark Lewin's Leaflet.js Succinctly is the first step on the road to producing the best interactive maps you possibly can._
 
