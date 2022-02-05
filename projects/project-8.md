@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: images/access-ineasysteps.jpg
+image: images/access-ineasysteps.png
 title: Access 2003 in Easy Steps
 permalink: projects/access-ineasysteps
 # All dates must be YYYY-MM-DD format!
