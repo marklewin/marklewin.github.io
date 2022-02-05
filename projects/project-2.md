@@ -11,7 +11,7 @@ labels:
 summary: A quick introduction to the main features of the Google Maps API for readers familiar with vanilla JavaScript.
 ---
 
-<img class="ui medium right floated rounded image" src="../images/google-maps-api-succinctly.png">
+<img class="ui medium right floated rounded image" src="../images/google-maps-api-cover.png">
 
 _In Google Maps API Succinctly, Mark Lewin gives you a hands-on, beginner-level introduction to developing mapping applications using the Google Maps JavaScript API. Learn the ins and outs of the API so that you can harness the power of Google Maps within your own websites and applications. Lewin will take you from requesting an API key, through adding overlays, to customizing the generation of directions in your app._
 
