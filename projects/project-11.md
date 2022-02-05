@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: images/oracle-mysql-logo.jpg
+image: images/oracle-mysql-logo.png
 title: Oracle MySQL Blog
 permalink: projects/oracle-mysql-blog
 # All dates must be YYYY-MM-DD format!
