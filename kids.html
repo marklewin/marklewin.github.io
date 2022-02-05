@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/kids.css') }}"
+    />
+    <title>Kids Calendar 2021-2022</title>
+  </head>
+  <body>
+    <h1>Kids Calendar 2021-2022</h1>
+
+    <div id="currDate"></div>
+
+    <!--<h2>Month</h2>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>-->
+
+    <h2>June</h2>
+    <ul>
+      <li>25/26 - B (P and G)</li>
+    </ul>
+
+    <h2>July</h2>
+    <ul>
+      <li>
+        2/3 - <strong>CHANGED -> B</strong> (B collects from Aylesbury) (P and
+        G)
+      </li>
+      <li>9/10 - <strong>CHANGED -> P</strong></li>
+      <li>16/17 - <strong>CHANGED -> P</strong></li>
+      <li>23/24 - B (P and G)</li>
+      <li>30/31 - P</li>
+    </ul>
+
+    <h2>August</h2>
+    <ul>
+      <li>6/7 - B (P and G)</li>
+      <li>13/14 - P</li>
+      <li>20/21 - B (P and G)</li>
+      <li>27/28 - P</li>
+    </ul>
+
+    <h2>September</h2>
+    <ul>
+      <li>3/4 <strong>CHANGED -> P </strong></li>
+      <li>10/11 <strong>CHANGED -> B </strong>(G only)</li>
+      <li>17/18 - B (G only)</li>
+      <li>24/25 - P</li>
+    </ul>
+
+    <h2>October</h2>
+    <ul>
+      <li>1/2 - B (G only)</li>
+      <li>8/9 - P</li>
+      <li>15/16 - B (G only)</li>
+      <li>22/23 - P</li>
+      <li>29/30 - B (G only)</li>
+    </ul>
+
+    <h2>November</h2>
+    <ul>
+      <li>5/6 - P</li>
+      <li>12/13 - B (G only)</li>
+      <li>19/20 - P</li>
+      <li>26/27 - B (G here all day on Friday 26th)</li>
+    </ul>
+
+    <h2>December</h2>
+    <ul>
+      <li>3/4 - P</li>
+      <li>10/11 - B</li>
+      <li>17/18 - P</li>
+      <li>
+        25/26/27 - (P and G) B collects Xmas late morning, returns morning of
+        28th
+      </li>
+      <li>31/1 - P</li>
+    </ul>
+
+    <h2>January</h2>
+    <ul>
+      <li>7/8 - P - moved because escaping covid in NF</li>
+      <li>14/15 - P</li>
+      <li>21/22 - B</li>
+      <li>28/29 - B</li>
+    </ul>
+
+    <h2>February</h2>
+    <ul>
+      <li>4/5 - P</li>
+      Changed B covid
+      <li>11/12 - P</li>
+      <li>18/19 - B</li>
+      <li>25/26- P</li>
+    </ul>
+
+    <h2>March</h2>
+    <ul>
+      <li>4/5 - P</li>
+      <li>11/12 - P</li>
+      <li>18/19 - B</li>
+      <li>25/26- P</li>
+    </ul>
+
+    <h2>April</h2>
+    <ul>
+      <li>1/2 - B</li>
+      <li>8/9 - P</li>
+      <li>15/16 - B</li>
+      <li>22/23 - P</li>
+      <li>29/30 - B</li>
+    </ul>
+    <script>
+      const n = new Date();
+      const y = n.getFullYear();
+      const m = n.getMonth() + 1;
+      const d = n.getDate();
+      document.getElementById("currDate").innerHTML = m + "/" + d + "/" + y;
+    </script>
+  </body>
+</html>
