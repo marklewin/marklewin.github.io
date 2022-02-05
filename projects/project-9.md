@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: images/twilio-logo.png
-title: Twilio Voices Blog Post
+title: Twilio Voices Blog Posts
 permalink: projects/twilio-blog
 # All dates must be YYYY-MM-DD format!
 date: 2022-01-10
