@@ -3,7 +3,7 @@ layout: project
 type: project
 image: images/go-succinctly.png
 title: Go Succinctly
-permalink: projects/go-web-dev-succinctly
+permalink: projects/go-succinctly
 # All dates must be YYYY-MM-DD format!
 date: 2017-07-24
 labels:
