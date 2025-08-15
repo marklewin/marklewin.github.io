@@ -1,5 +1,690 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Lewin | Expert Technical Writer for APIs & Developer Documentation</title>
+    <meta name="description" content="Expert technical writer specializing in API documentation, developer education, and technical content. Available for remote freelance and contract opportunities.">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-{% include {{ site.theme-home }} %}
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1e3a8a;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 50%, #1e3a8a 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #1e40af;
+        }
+
+        .btn-primary:hover {
+            background: #f1f5f9;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #1e40af;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            min-height: 600px;
+        }
+
+        .sidebar {
+            background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 3rem 2rem;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .contact-info {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-info h3 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: #f0f9ff;
+        }
+
+        .contact-item i {
+            color: #3b82f6;
+            width: 20px;
+        }
+
+        .contact-item a {
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #3b82f6;
+        }
+
+        .skills {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .skills h3 {
+            color: #1e40af;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            margin: 0.25rem;
+            font-weight: 500;
+        }
+
+        .certifications {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .certifications h3 {
+            color: #1e40af;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .cert-item {
+            background: #f0f9ff;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .content {
+            padding: 3rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            color: #1e3a8a;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .section h2:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 2rem;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            border-radius: 2px;
+        }
+
+        .highlight-text {
+            font-size: 1.2rem;
+            color: #475569;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .experience-item {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid #3b82f6;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .experience-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #1e40af);
+        }
+
+        .job-title {
+            color: #1e40af;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            color: #1e3a8a;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .duration {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .achievements {
+            list-style: none;
+        }
+
+        .achievements li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #475569;
+        }
+
+        .achievements li:before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-size: 0.8rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                order: 2;
+            }
+
+            .content {
+                padding: 2rem 1.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+
+        .floating-action {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .floating-action:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
+        }
+
+        .current-role {
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            border-left-color: #1e40af;
+        }
+
+        .current-role .job-title::after {
+            content: '• CURRENT';
+            background: #10b981;
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            margin-left: 1rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Mark Lewin</h1>
+            <p class="subtitle">Technical Writer | API & Developer Docs Expert | Tutorials, Blog Posts & DevRel Content | Docs-as-Code</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+                <a href="#experience" class="btn btn-outline">
+                    <i class="fas fa-briefcase"></i>
+                    View Experience
+                </a>
+                <a href="https://devtechwriter.com" class="btn btn-outline" target="_blank">
+                    <i class="fas fa-portfolio"></i>
+                    Portfolio
+                </a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="grid">
+                <div class="sidebar">
+                    <div class="profile-section">
+                        <div class="avatar">ML</div>
+                        <h3>Available for Remote Work</h3>
+                        <p style="color: #10b981; font-weight: 600; margin-top: 0.5rem;">
+                            <i class="fas fa-circle" style="font-size: 0.5rem; margin-right: 0.5rem;"></i>
+                            Open to New Projects
+                        </p>
+                    </div>
+
+                    <div class="contact-info" id="contact">
+                        <h3><i class="fas fa-address-card"></i> Contact Information</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:mark@devtechwriter.com">mark@devtechwriter.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <a href="https://devtechwriter.com" target="_blank">devtechwriter.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/devtechwriter" target="_blank">devtechwriter</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Northampton, England, UK</span>
+                        </div>
+                    </div>
+
+                    <div class="skills">
+                        <h3><i class="fas fa-code"></i> Core Expertise</h3>
+                        <div class="skill-tag">API Documentation</div>
+                        <div class="skill-tag">Developer Education</div>
+                        <div class="skill-tag">Docs-as-Code</div>
+                        <div class="skill-tag">DevRel Content</div>
+                        <div class="skill-tag">Technical Training</div>
+                        <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">Node.js</div>
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">Java</div>
+                        <div class="skill-tag">Ruby</div>
+                        <div class="skill-tag">Linux</div>
+                        <div class="skill-tag">Kubernetes</div>
+                        <div class="skill-tag">Oracle Enterprise Linux</div>
+                        <div class="skill-tag">Git/GitHub</div>
+                        <div class="skill-tag">REST APIs</div>
+                        <div class="skill-tag">SDK Documentation</div>
+                    </div>
+
+                    <div class="certifications">
+                        <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                        <div class="cert-item">
+                            <strong>LFS101:</strong> Introduction to Linux
+                        </div>
+                        <div class="cert-item">
+                            <strong>CompTIA CTT+:</strong> Certified Technical Trainer
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="section">
+                        <h2>About</h2>
+                        <p class="highlight-text">
+                            I'm an experienced technical writer who specialises in developer-focused documentation: API references, tutorials, courseware, and technical guides that help engineers get productive fast. I've worked closely with engineering and developer relations teams to create content that both educates and engages, designed to build communities, increase adoption, and reduce support overhead.
+                        </p>
+                        <p class="highlight-text">
+                            At Oracle, I quickly mastered many technologies that were new to me, including Oracle Linux system administration and the Kubernetes-based Oracle Cloud Native Environment, showcasing my ability to pick up complex domains fast and explain them clearly. I work end-to-end in a docs-as-code workflow, write in multiple programming languages, and know my way around the Linux command line.
+                        </p>
+                        
+                        <div class="stats">
+                            <div class="stat-card">
+                                <div class="stat-number">17+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">10K+</div>
+                                <div class="stat-label">Course Students</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">4.5/5</div>
+                                <div class="stat-label">Course Rating</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section" id="experience">
+                        <h2>Professional Experience</h2>
+                        
+                        <div class="experience-item current-role">
+                            <div class="job-title">Principal User Assistance Developer</div>
+                            <div class="company">Oracle</div>
+                            <div class="duration">August 2024 - Present</div>
+                            <ul class="achievements">
+                                <li>Creating technical documentation for Oracle Linux and Oracle Cloud Native Environment (Kubernetes-based)</li>
+                                <li>Delivering content for developers, system admins, and security specialists in a docs-as-code workflow</li>
+                                <li>Quickly learning new technologies to produce accurate, high-quality content within tight deadlines</li>
+                                <li>Working with complex enterprise-level systems and cloud-native technologies</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Technical Writer/Documentation Manager</div>
+                            <div class="company">Barclays UK</div>
+                            <div class="duration">November 2022 - June 2024</div>
+                            <ul class="achievements">
+                                <li>Managed comprehensive onboarding documentation for new data lake platform</li>
+                                <li>Developed quickstart guides, reference materials, and internal communications</li>
+                                <li>Advised development teams on improving documentation quality and usability</li>
+                                <li>Led documentation strategy initiatives across multiple engineering teams</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Senior Developer Educator</div>
+                            <div class="company">Ably (Real-time Communications)</div>
+                            <div class="duration">April 2022 - November 2022</div>
+                            <ul class="achievements">
+                                <li>Created DevRel content: tutorials, blog posts, and code samples to engage developers</li>
+                                <li>Produced structured learning materials including written content, videos, and workshops</li>
+                                <li>Maintained API references and quickstart guides in a docs-as-code workflow</li>
+                                <li>Built community engagement through educational content and developer advocacy</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Senior Technical Writer</div>
+                            <div class="company">Shell</div>
+                            <div class="duration">November 2021 - April 2022</div>
+                            <ul class="achievements">
+                                <li>Developed comprehensive documentation strategy for Shell's API ecosystem</li>
+                                <li>Produced API references, conceptual guides, and instructional materials</li>
+                                <li>Established documentation standards for enterprise-level API programs</li>
+                                <li>Collaborated with cross-functional teams to improve developer experience</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Senior Technical Writer</div>
+                            <div class="company">Ably (Real-time Communications)</div>
+                            <div class="duration">May 2021 - November 2021</div>
+                            <ul class="achievements">
+                                <li>Documented SDKs and REST APIs for real-time communications platform</li>
+                                <li>Created tutorials and conceptual guides with code samples in multiple languages</li>
+                                <li>Maintained comprehensive API documentation for complex real-time systems</li>
+                                <li>Collaborated with engineering teams to ensure documentation accuracy</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Senior Technical Writer/Trainer</div>
+                            <div class="company">Vonage</div>
+                            <div class="duration">September 2018 - May 2021</div>
+                            <ul class="achievements">
+                                <li>Produced DevRel content including tutorials and blog posts for communication APIs</li>
+                                <li>Designed and delivered accredited training courses for partner developers</li>
+                                <li>Created and documented API references and sample applications</li>
+                                <li>Designed and implemented feedback mechanism that improved documentation quality and responsiveness</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Senior Curriculum Developer</div>
+                            <div class="company">Oracle University</div>
+                            <div class="duration">January 2013 - September 2018</div>
+                            <ul class="achievements">
+                                <li>Designed and developed comprehensive MySQL training programmes and hands-on labs</li>
+                                <li>Researched and documented complex, undocumented database features</li>
+                                <li>Created enterprise-level training materials for global delivery</li>
+                                <li>Led train-the-trainer sessions for international instructor teams</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Freelance Technical Writer/Trainer</div>
+                            <div class="company">Self Employed</div>
+                            <div class="duration">November 2012 - September 2016</div>
+                            <ul class="achievements">
+                                <li>Delivered GIS/web mapping training and documentation projects</li>
+                                <li>Authored Pluralsight course "Google Maps API: Get Started" (10,000+ students, 4.5/5 rating)</li>
+                                <li>Published multiple technical books including "Leaflet.js Succinctly" and "Go Succinctly"</li>
+                                <li>Built sustainable freelance practice with recurring enterprise clients</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Why Choose Me for Your Project?</h2>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                            <div style="padding: 1.5rem; background: #f0f9ff; border-radius: 10px; border-left: 4px solid #3b82f6;">
+                                <h4 style="color: #1e40af; margin-bottom: 1rem;"><i class="fas fa-rocket"></i> Rapid Technology Adoption</h4>
+                                <p>I quickly master new technologies—from Kubernetes to Oracle Cloud Native Environment—and translate complex concepts into clear, actionable documentation.</p>
+                            </div>
+                            <div style="padding: 1.5rem; background: #f0f9ff; border-radius: 10px; border-left: 4px solid #3b82f6;">
+                                <h4 style="color: #1e40af; margin-bottom: 1rem;"><i class="fas fa-cogs"></i> End-to-End Docs-as-Code</h4>
+                                <p>From Git workflows to automated publishing, I work seamlessly in modern documentation toolchains that scale with your development process.</p>
+                            </div>
+                            <div style="padding: 1.5rem; background: #f0f9ff; border-radius: 10px; border-left: 4px solid #3b82f6;">
+                                <h4 style="color: #1e40af; margin-bottom: 1rem;"><i class="fas fa-users"></i> Proven Impact</h4>
+                                <p>My Pluralsight course educated 10,000+ developers, and my documentation improvements have measurably increased developer adoption and satisfaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-action" onclick="window.location.href='mailto:mark@devtechwriter.com'">
+        <i class="fas fa-comment"></i>
+    </div>
+
+    <script>
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add subtle animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.experience-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
