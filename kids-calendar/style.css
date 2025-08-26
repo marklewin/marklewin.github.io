@@ -1,0 +1,68 @@
+/* Applies to the entire body of the HTML document (except where overridden by more specific
+selectors). */
+body {
+  margin: 25px;
+  background-color: rgb(240, 240, 240);
+  font-family: arial, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: normal;
+  margin-top: 5px;
+  color: blue;
+}
+
+h2 {
+  color: inherit;
+}
+
+ul#archive li {
+  display: inline;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+ul > li {
+  color: inherit;
+}
+
+#top {
+  text-align: center;
+}
+
+#month {
+  margin: auto;
+  padding: 10px;
+  background: #fff;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+/* Applies to all elements with <... class="someclass"> specified. */
+.past {
+  color: gainsboro;
+}
+
+.future {
+  color: grey;
+}
+
+.current {
+  color: blue;
+  border: solid blue;
+}
+
+hr {
+  border: 7px solid gray;
+  border-radius: 5px;
+  margin-top: 10px;
+}
